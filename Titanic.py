@@ -4,15 +4,16 @@
 # In[2]:
 
 
-get_ipython().run_line_magic('pylab', 'inline')
-import pandas as pd 
+# get_ipython().run_line_magic('pylab', 'inline')
+import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 
 # In[10]:
 
 
-df=pd.read_csv("Desktop/train.csv")
+df=pd.read_csv("train.csv")
 
 
 # In[12]:
@@ -84,7 +85,7 @@ df['Pclass'].value_counts()
 # In[33]:
 
 
-get_ipython().run_line_magic('matplotlib', 'inline')
+# get_ipython().run_line_magic('matplotlib', 'inline')
 alpha_color=0.5
 df['Survived'].value_counts().plot(kind='bar')
 
@@ -108,4 +109,4 @@ df['Pclass'].value_counts().plot(kind='bar',
 
 
 df.plot(kind='scatter', x='Survived' , y='Age')
-
+plt.show()
